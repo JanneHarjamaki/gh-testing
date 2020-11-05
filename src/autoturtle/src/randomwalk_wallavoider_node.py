@@ -5,7 +5,9 @@ from geometry_msgs.msg import Twist # ohjausviesti
 from turtlesim.msg import Pose # komennot
 
 import random
-
+"""
+eka turtle..
+"""
 # callback-funktio, jossa viestin saatua tutkitaan ja julkaistaan se
 def callback(data):
     vel_msg = Twist()
