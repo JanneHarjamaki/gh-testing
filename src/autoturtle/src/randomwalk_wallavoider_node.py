@@ -32,8 +32,9 @@ def callback(data):
 
 rospy.init_node('turtlebot_auto',anonymous=True)
 velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=1)
-# tilaaja..
+# tilaaja.. ottaa yhteytta callback -funktioon
 pose_subscriber = rospy.Subscriber('/turtle1/pose',Pose,callback)
 
+# niinkauan kun rossi pyorii ja asiat ok, tehdaan spinnia (muuten poistuisi ohjelmasta)
 while not rospy.is_shutdown():
     rospy.spin()
